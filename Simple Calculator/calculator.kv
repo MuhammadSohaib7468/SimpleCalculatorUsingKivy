@@ -1,0 +1,238 @@
+<MyLayout>
+    # FOR BACKGROUND COLOR OF LAYOUT
+    canvas.before:
+        Color:
+            rgba: (255/255, 255/255, 255/255, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    # size: root.width, root.height
+    
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        # FOR BACKGROUND COLOR OF LAYOUT
+        canvas.before:
+            Color:
+                rgba: (255/255, 255/255, 255/255, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: (1, 0.6)
+            # FOR BACKGROUND COLOR OF LAYOUT
+            canvas.before:
+                Color:
+                    rgba: (255/255, 255/255, 255/255, 0.82)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            TextInput:
+                id: previous_operand
+                multiline: False
+                readonly: "False"
+                foreground_color: "#808080"
+                background_normal: ""
+                background_color: "#ffffff"
+                font_size: 24
+                halign: "right"
+                padding_y: [self.height / 1.1 - (self.line_height / 1.1) * len(self._lines), 0]
+
+            TextInput:
+                id: current_operand
+                multiline: False
+                readonly: "False"
+                background_normal: ""
+                background_color: "#ffffff"
+                font_size: 34
+                halign: "right"
+                size_hint: (1, 0.5)
+                padding_y: [self.height / 1.5 - (self.line_height / 1.5) * len(self._lines), 0]
+
+        GridLayout:
+            rows: 5
+            cols: 4
+            spacing: 2.5
+            padding: 3.5
+            Button:
+                id: clear
+                on_press: root.clear()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "C"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: delete
+                on_press: root.delete()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "Del"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: square
+                on_press: root.square()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "x2"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: divide
+                on_press: root.divide()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "÷"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: seven
+                on_press: root.seven()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "7"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: eight
+                on_press: root.eight()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "8"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: nine
+                on_press: root.nine()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "9"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: multiplication
+                on_press: root.multiplication()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "x"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: four
+                on_press: root.four()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "4"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: five
+                on_press: root.five()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "5"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: six
+                on_press: root.six()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "6"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: addition
+                on_press: root.addition()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "+"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: one
+                on_press: root.one()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "1"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: two
+                on_press: root.two()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "2"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: three
+                on_press: root.three()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "3"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: subtraction
+                on_press: root.subtraction()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "-"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: decimal
+                on_press: root.decimal()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "."
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: zero
+                on_press: root.zero()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "0"
+                background_normal: ""
+                background_color: "#87CEEB"
+
+            Button:
+                id: plus_minus
+                on_press: root.plus_minus()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "+/-"
+                background_normal: ""
+                background_color: "#40E0D0"
+
+            Button:
+                id: equals
+                on_press: root.equals()
+                size_hint: (.2, .2)
+                font_size: 25
+                text: "="
+                background_normal: ""
+                background_color: "#40E0D0"
